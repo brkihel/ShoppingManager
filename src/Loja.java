@@ -51,8 +51,7 @@ public class Loja {
         if(getSalarioBaseFuncionario() == -1){
             return -1;
         } else{
-            double gastoTotalSalarios = getQuantidadeFuncionarios() * getSalarioBaseFuncionario();
-            return gastoTotalSalarios;
+            return getQuantidadeFuncionarios() * getSalarioBaseFuncionario();
         }
     }
 
