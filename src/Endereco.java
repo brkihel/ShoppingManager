@@ -74,14 +74,14 @@ public class Endereco {
     }
 
     public String toString() {
-        return "Endereco{" +
-                "Nome da rua: " + nomeDaRua + '\'' +
-                ", Cidade: " + cidade + '\'' +
-                ", Estado: " + estado + '\'' +
-                ", País: " + pais + '\'' +
-                ", CEP: " + cep + '\'' +
-                ", Número: " + numero + '\'' +
-                ", Complemento: " + complemento + '\'' +
-                '}';
+        return "Endereco{ " +
+                "Nome da rua: " + nomeDaRua +
+                ", Cidade: " + cidade +
+                ", Estado: " + estado +
+                ", País: " + pais +
+                ", CEP: " + cep +
+                ", Número: " + numero +
+                ", Complemento: " + complemento +
+                " }";
     }
 }

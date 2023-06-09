@@ -66,10 +66,10 @@ public class Data {
     }
 
     public String toString() {
-        return "Data{" +
+        return "Data{ " +
                 "Dia: " + dia +
                 ", Mês: " + mes +
                 ", Ano: " + ano +
-                '}';
+                " }";
     }
 }

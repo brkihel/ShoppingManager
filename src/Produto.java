@@ -25,9 +25,9 @@ public class Produto {
     }
 
     public String toString() {
-        return "Produto{" +
-                "Nome do produto: " + nome + '\'' +
+        return "Produto{ " +
+                "Nome do produto: " + nome +
                 ", Preço do produto: " + preco +
-                '}';
+                " }";
     }
 }
