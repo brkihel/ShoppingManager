@@ -76,8 +76,47 @@ public class Main {
                 Data fundacaoLoja1 = new Data(diaFundacao, mesFundacao, anoFundacao);
 
                 Loja loja1 = new Loja(nomeLoja, quantidadeFuncionarios, salarioBaseFuncionarios, enderecoLoja1, fundacaoLoja1);
+                break;
 
+            case 2:
+                System.out.println("====================================================");
+                System.out.println("Digite o nome do produto a ser registrado:");
+                String nomeProduto = sc.nextLine();
+                clearBuffer(sc);
+                System.out.println("Digite o preço do produto:");
+                double precoProduto = sc.nextDouble();
+                System.out.println("O seu produto tem validade: [1] - Sim / [2] - Não");
+                int qValidade = sc.nextInt();
+                int diaVal;
+                int mesVal;
+                int anoVal;
+                if(qValidade == 1){
+                    System.out.println("Digite o dia da validade do seu produto(ex: 02):");
+                    diaVal = sc.nextInt();
+                    System.out.println("Digite o mês(número correspondente ex: 04) da validade do seu produto:");
+                    mesVal = sc.nextInt();
+                    System.out.println("Digite o ano da validade do seu produto(ex: 2001):");
+                    anoVal = sc.nextInt();
+                    Data dataValidade = new Data(diaVal, mesVal, anoVal);
+
+                    Produto produto1 = new Produto(nomeProduto, precoProduto, dataValidade);
+                } else if(qValidade == 2){
+                    Produto produto1 = new Produto(nomeProduto, precoProduto);
+                } else{
+                    System.out.println("OPÇÃO INVÁLIDA...");
+                }
+                break;
+
+            case 3:
+                System.out.println("Programa finalizando...");
+                break;
+
+            default:
+                System.out.println("OPÇÃO INVÁLIDA... Saindo.");
+                break;
         }
+
+
 
     }
 
