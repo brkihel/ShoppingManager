@@ -1,23 +1,23 @@
 public class Loja {
-    private String nome;
-    private int quantidadeFuncionarios;
-    private double salarioBaseFuncionario;
-    private Endereco enderecoLoja;
-    private Data dataFundacao;
+    private String nome = "Loja Padrão";
+    private int quantidadeFuncionarios = 10;
+    private double salarioBaseFuncionario = 1000.0;
+    private Endereco enderecoLoja = new Endereco("Rua Principal", "Porto Alegre", "Rio Grande do Sul", "Brasil", "91000-000", "2000", "Prédio Comercial Loja 1");
+    private Data dataFundacao = new Data(1,1,2000);;
 
-    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Data dataFundacao) {
+    public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco enderecoLoja, Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
-        //this.enderecoLoja = enderecoLoja;
+        this.enderecoLoja = enderecoLoja;
         this.dataFundacao = dataFundacao;
     }
 
-    public Loja(String nome, int quantidadeFuncionarios, Data dataFundacao) {
+    public Loja(String nome, int quantidadeFuncionarios,Endereco enderecoLoja, Data dataFundacao) {
         this.nome = nome;
         this.quantidadeFuncionarios = quantidadeFuncionarios;
         this.salarioBaseFuncionario = -1;
-        //this.enderecoLoja = enderecoLoja;
+        this.enderecoLoja = enderecoLoja;
         this.dataFundacao = dataFundacao;
     }
 
@@ -45,16 +45,14 @@ public class Loja {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
-    /*
     public Endereco getEndereco() {
-        return endereco;
+        return enderecoLoja;
     }
 
     public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+        this.enderecoLoja = endereco;
     }
 
-    */
     public Data getData() {
         return dataFundacao;
     }
@@ -64,7 +62,9 @@ public class Loja {
                 "Nome da loja: " + nome +
                 ", Quantidade de funcionários: " + quantidadeFuncionarios +
                 ", Salário base dos funcionários: " + salarioBaseFuncionario +
-                "R$"+
+                "R$ / "+
+                "Endereço: " + enderecoLoja +
+                "Data de fundação da loja: " + dataFundacao +
                 " }";
     }
 

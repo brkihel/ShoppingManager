@@ -72,4 +72,14 @@ public class Data {
                 ", Ano: " + ano +
                 " }";
     }
+
+    public int compararDatas(Data dataCompare){
+        if(this.ano != dataCompare.ano){
+            return this.ano - dataCompare.ano;
+        } else if (this.mes != dataCompare.mes) {
+            return this.mes - dataCompare.mes;
+        } else {
+            return this.dia - dataCompare.dia;
+        }
+    }
 }
