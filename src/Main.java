@@ -57,8 +57,8 @@ public class Main {
                 System.out.println("Digite o número do endereço da sua loja:");
                 String numeroEndLoja = sc.nextLine();
                 System.out.println("Digite o complemento do endereço da sua loja:");
-                String complementoEndereço = sc.nextLine();
-                Endereco enderecoLoja1 = new Endereco(nomeRua, nomeCidade, nomeEstado, nomePais, cepLoja, numeroEndLoja, complementoEndereço);
+                String complementoEndereco = sc.nextLine();
+                Endereco enderecoLoja1 = new Endereco(nomeRua, nomeCidade, nomeEstado, nomePais, cepLoja, numeroEndLoja, complementoEndereco);
 
                 System.out.println("====================================================");
                 //Registrando a data de fundação da loja pelo usuario:
