@@ -10,6 +10,4 @@ public class Main {
             programaRodando = mainMenu.opcoesMenu(escolhaUsuario);
         }
     }
-
-
 }

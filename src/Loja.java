@@ -1,9 +1,9 @@
 public class Loja {
-    private String nome = "Loja Padrão";
-    private int quantidadeFuncionarios = 10;
-    private double salarioBaseFuncionario = 1000.0;
-    private Endereco enderecoLoja = new Endereco("Rua Principal", "Porto Alegre", "Rio Grande do Sul", "Brasil", "91000-000", "2000", "Prédio Comercial Loja 1");
-    private Data dataFundacao = new Data(1,1,2000);;
+    private String nome;
+    private int quantidadeFuncionarios;
+    private double salarioBaseFuncionario;
+    private Endereco enderecoLoja;
+    private Data dataFundacao;
 
     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco enderecoLoja, Data dataFundacao) {
         this.nome = nome;
@@ -45,15 +45,15 @@ public class Loja {
         this.salarioBaseFuncionario = salarioBaseFuncionario;
     }
 
-    public Endereco getEndereco() {
+    public Endereco getEnderecoLoja() {
         return enderecoLoja;
     }
 
-    public void setEndereco(Endereco endereco) {
+    public void setEnderecoLoja(Endereco endereco) {
         this.enderecoLoja = endereco;
     }
 
-    public Data getData() {
+    public Data getDataFundacao() {
         return dataFundacao;
     }
 
@@ -64,7 +64,7 @@ public class Loja {
                 ", Salário base dos funcionários: " + salarioBaseFuncionario +
                 "R$ / "+
                 "Endereço: " + enderecoLoja +
-                "Data de fundação da loja: " + dataFundacao +
+                " / Data de fundação da loja: " + dataFundacao +
                 " }";
     }
 
