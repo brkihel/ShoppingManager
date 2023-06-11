@@ -33,6 +33,11 @@ public class Menu {
                 clearBuffer(sc);
                 String nomeLoja = sc.nextLine();
 
+                //Registrando o número de produtos em estoque
+                System.out.println("Digite o número de produtos em estoque:");
+                clearBuffer(sc);
+                int quantidadeProdutosEstoque = sc.nextInt();
+
                 System.out.println("====================================================");
                 //Registrando a quantidade de funcionários pelo usuário
                 System.out.println("A loja terá mais de um funcionário? [1] - Sim / [2] - Não");
@@ -90,7 +95,7 @@ public class Menu {
                 int anoFundacao = sc.nextInt();
                 Data fundacaoLoja1 = new Data(diaFundacao, mesFundacao, anoFundacao);
 
-                Loja loja1 = new Loja(nomeLoja, quantidadeFuncionarios, salarioBaseFuncionarios, enderecoLoja1, fundacaoLoja1);
+                Loja loja1 = new Loja(nomeLoja, quantidadeFuncionarios, salarioBaseFuncionarios, enderecoLoja1, fundacaoLoja1, quantidadeProdutosEstoque);
                 System.out.println(loja1.toString());
                 return false;
 
