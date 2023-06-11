@@ -39,7 +39,7 @@ public class Produto {
         return "Produto{ " +
                 "Nome do produto: " + nome +
                 ", Preço do produto: " + preco +
-                ", Data de validade: " +
+                ", Data de validade: " + dataValidade +
                 " }";
     }
 
