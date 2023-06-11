@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Data {
     private int dia;
     private int mes;
@@ -66,20 +68,13 @@ public class Data {
     }
 
     public String toString() {
-        return "Data{ " +
-                "Dia: " + dia +
+        return  "Dia: " + dia +
                 ", Mês: " + mes +
-                ", Ano: " + ano +
-                " }";
+                ", Ano: " + ano;
     }
 
-    public int compararDatas(Data dataCompare){
-        if(this.ano != dataCompare.ano){
-            return this.ano - dataCompare.ano;
-        } else if (this.mes != dataCompare.mes) {
-            return this.mes - dataCompare.mes;
-        } else {
-            return this.dia - dataCompare.dia;
-        }
+    public LocalDate toLocalDate() {
+        return LocalDate.of(ano, mes, dia);
     }
+
 }

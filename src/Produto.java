@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Produto {
 
     private String nome;
@@ -43,7 +45,14 @@ public class Produto {
                 " }";
     }
 
-    public boolean estaVencido(Data dataAtual){
-        return dataAtual != null & getDataValidade().compararDatas(dataAtual) < 0;
+    public boolean estaVencido(){
+        LocalDate dataAtual = LocalDate.now();
+        boolean produtoVenceu = dataValidade != null && dataValidade.toLocalDate().isBefore(dataAtual);
+        if (produtoVenceu == true){
+            System.out.println("O produto venceu.");
+        } else {
+            System.out.println("O produto ainda está na validade.");
+        }
+        return produtoVenceu;
     }
 }

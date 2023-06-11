@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 
@@ -117,9 +118,12 @@ public class Menu {
 
                     Produto produto1 = new Produto(nomeProduto, precoProduto, dataValidade);
                     System.out.println(produto1.toString());
+
+                    produto1.estaVencido();
                 } else if (qValidade == 2) {
                     Produto produto1 = new Produto(nomeProduto, precoProduto);
                     System.out.println(produto1.toString());
+                    System.out.println("O produto não tem prazo de validade.");
                 } else {
                     System.out.println("OPÇÃO INVÁLIDA...");
                 }
